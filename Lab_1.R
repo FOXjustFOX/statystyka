@@ -44,7 +44,7 @@ suma_f <- sum(f)
 a_sorted <- sort(a)
 b_sorted <- sort(b)
 c_sorted <- sort(c)
-d_sorted <- sort(d, na.last=TRUE)
+d_sorted <- sort(d, na.last = TRUE)
 e_sorted <- sort(e)
 f_sorted <- sort(f)
 
