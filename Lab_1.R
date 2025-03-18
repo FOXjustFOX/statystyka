@@ -74,7 +74,7 @@ D <- matrix(c(1, 2, 4, 3, 5, 7, 5, 7, 11), nrow=3, byrow=TRUE)
 # ii) Operacje na macierzach
 # A_plus_B <- A + B
 A_plus_B_T <- A + t(B)   #TO nie działa BŁĄD
-#A_times_B <- A %*% B    TO nie działa BŁĄD
+A_times_B <- A %*% B    #TO nie działa BŁĄD
 A_mn <- A * A
 D_inv <- solve(D)
 D_D_inv <- D %*% D_inv

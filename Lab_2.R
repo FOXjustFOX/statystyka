@@ -21,6 +21,7 @@ oceny$Srednia <- (oceny$Analiza + oceny$Algebra) / 2
 
 # f) wyniki kobiet
 kobiety <- oceny[oceny$Plec == "k", ]
+sr_kobiety <- mean(kobiety$Srednia)
 
 # g) stud, ktorzy maja co najmniej 4.5 z jednego z przedmiotów
 dobre_oceny <- oceny[oceny$Analiza >= 4.5 | oceny$Algebra >= 4.5, ] # | to OR
@@ -56,6 +57,8 @@ kobiety_nadwaga <- waga[waga$plec == 1 & waga$W > 25, ]
 # g) mężczyźni
 mezczyzni <- waga[waga$plec == 0, ] # , dla wszystkich kolumn
 
+m_bmi <- waga[waga$plec == 0 & waga$W < 20, ]
+
 # h) l osób wzrost < 175
 sum_pow_175 <- sum(waga$Wzrost > 175)
 
@@ -90,3 +93,5 @@ m_60_cena_mala <- sum(mieszkania$Metraz > 60 & mieszkania$Cena < 350000)
 
 #te mieszkania #nieprawda, zbyt piękne
 wow <- mieszkania[mieszkania$Metraz > 60 & mieszkania$Cena < 350000, ]
+
+s_p_w_2 <- mieszkania[mieszkania$Dzielnica == "Srodmiescie" & mieszkania$Pietro == 0 & mieszkania$Pokoje > 2, ]
