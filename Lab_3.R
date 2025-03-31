@@ -25,9 +25,9 @@ prob_2_2 <- ppois(3, lambda_2)
 prob_2_3 <- ppois(5, lambda_2) - ppois(2, lambda_2)
 
 # Wykres rozkładu Y
-# x2 <- 0:30
-# y2 <- dpois(x2, lambda_2)
-# plot(x2, y2, type = "h", lwd = 2, col = "red", main = "Rozkład liczby sprzedanych samochodów", xlab = "Liczba sprzedanych samochodów (Y)", ylab = "Prawdopodobieństwo") # nolint: line_length_linter.
+x2 <- 0:30
+y2 <- dpois(x2, lambda_2)
+plot(x2, y2, type = "h", lwd = 2, col = "red", main = "Rozkład liczby sprzedanych samochodów", xlab = "Liczba sprzedanych samochodów (Y)", ylab = "Prawdopodobieństwo") # nolint: line_length_linter.
 
 
 # Zadanie 3: Średnia i wariancja 
@@ -38,15 +38,17 @@ p <- c(0.2, 0.4, 0.3, 0.1)
 e_x <- sum(x * p)  # Średnia E(X)
 var_x <- sum((x - e_x)^2 * p)  # Wariancja Var(X)
 
+
 # Zadanie 6: Wykresy rozkładów X i Y
 x6 <- 0:10
-p_x6 <- c(0.2, 0.4, 0.3, 0.1, rep(0, 7))
+# p_x6 <- c(0.2, 0.4, 0.3, 0.1, rep(0, 7))
+p_x6 <- dbinom(x6, 10, 0.02)
 
 y6 <- 0:10
 p_y6 <- dpois(y6, 2)
 
 # Wykres rozkładów X 
-# plot(x6, p_x6, type="h", lwd=2, col="blue", main="Porównanie rozkładów X i Y", xlab="Wartość zmiennej losowej", ylab="Prawdopodobieństwo")
-# lines(y6, p_y6, type="h", lwd=2, col="red")
-# legend("topright", legend=c("X", "Y"), col=c("blue", "red"), lwd=2)
+plot(x6, p_x6, type="h", lwd=2, col="blue", main="Porównanie rozkładów X i Y", xlab="Wartość zmiennej losowej", ylab="Prawdopodobieństwo")
+lines(y6, p_y6, type="h", lwd=2, col="red")
+legend("topright", legend=c("X", "Y"), col=c("blue", "red"), lwd=3)
 
