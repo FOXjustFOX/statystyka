@@ -35,19 +35,44 @@ print("Ramka danych (zad 2a iv):")
 print(df_a)
 cat("Wariancja częstości (zad 2a iv):", wariancja_czestosci, "\n")
 
+# Histogram rzutów kostką z zad 2a
+barplot(czestosci_a, main="Histogram rzutów kostką (2a)", 
+        xlab="Wynik", ylab="Częstość", col="lightblue")
+
 # b) Symulacja 600 rzutów kostką z użyciem sample()
 rzuty_b <- sample(1:6, 600, replace = TRUE)
 
-# Zadanie 3: Generowanie z rozkładu dyskretnego
+# Histogram rzutów kostką z zad 2b
+barplot(table(rzuty_b), main="Histogram rzutów kostką (2b)", 
+        xlab="Wynik", ylab="Częstość", col="lightgreen")
+
+# # Zadanie 3: Generowanie z rozkładu dyskretnego
 prob <- c(0.15, 0.25, 0.5, 0.1)
 x_dyskretne <- sample(0:3, 1000, replace = TRUE, prob = prob)
+
+# Histogram rozkładu dyskretnego
+barplot(table(x_dyskretne)/length(x_dyskretne), main="Histogram rozkładu dyskretnego", 
+        xlab="Wartość", ylab="Częstość względna", col="coral")
+
 
 # Zadanie 4
 # i) Rozkład Bin(10, 0.3)
 binomialne <- rbinom(100, size = 10, prob = 0.3)
 
+# Histogram rozkładu dwumianowego
+hist(binomialne, breaks=seq(-0.5, 10.5, by=1), prob=TRUE, 
+     main="Histogram rozkładu Bin(10, 0.3)", 
+     xlab="Liczba sukcesów", col="lightpink")
+
+
 # ii) Rozkład Geom(0.4) (liczba prób do pierwszego sukcesu INKLUZYWNIE)
-geometriczne <- rgeom(50, prob = 0.4) + 1
+geometryczne <- rgeom(50, prob = 0.4) + 1
+
+# Histogram rozkładu geometrycznego
+hist(geometryczne, breaks=seq(0.5, max(geometryczne)+0.5, by=1), prob=TRUE, 
+     main="Histogram rozkładu Geom(0.4)", 
+     xlab="Liczba prób do sukcesu", col="lightcyan")
+
 
 # Zadanie 5
 # a) Metoda odwracania dystrybuanty
@@ -57,6 +82,12 @@ losuj_odwracanie <- function(n) {
   return(sqrt(4 * u)) # Odwrócenie dystrybuanty
 }
 x_odwracanie <- losuj_odwracanie(200)
+
+# Histogram metody odwracania dystrybuanty
+hist(x_odwracanie, breaks=30, prob=TRUE, 
+     main="Histogram metody odwracania dystrybuanty", 
+     xlab="Wartość", col="wheat")
+
 
 # b) Metoda przyjęcia-odrzucenia
 losuj_odrzucanie <- function(n) {
@@ -73,3 +104,9 @@ losuj_odrzucanie <- function(n) {
   return(x_accept)
 }
 x_odrzucanie <- losuj_odrzucanie(200)
+
+# Histogram metody przyjęcia-odrzucenia
+hist(x_odrzucanie, breaks=30, prob=TRUE, 
+     main="Histogram metody przyjęcia-odrzucenia", 
+     xlab="Wartość", col="plum")
+
