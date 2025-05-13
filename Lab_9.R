@@ -24,7 +24,7 @@ cat("Wartość p:", p_value_z_zad1, "\n")
 # Porównanie statystyki testowej z wartościami krytycznymi (alpha = 0.05)
 alpha <- 0.05
 critical_value_z_zad1 <- qnorm(1 - alpha/2)
-cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad1, "\n")
+# cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad1, "\n")
 if (abs(z_statistic_zad1) > critical_value_z_zad1) {
   cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
 } else {
@@ -46,7 +46,7 @@ cat("Stopnie swobody (df):", df_zad1, "\n")
 
 # Porównanie statystyki testowej z wartościami krytycznymi (alpha = 0.05)
 critical_value_t_zad1 <- qt(1 - alpha/2, df = df_zad1)
-cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad1, "):", critical_value_t_zad1, "\n")
+# cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad1, "):", critical_value_t_zad1, "\n")
 if (abs(t_statistic_zad1) > critical_value_t_zad1) {
   cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
 } else {
@@ -91,7 +91,7 @@ if (!is.null(data_waga1)) {
         # Porównanie z wartościami krytycznymi (alpha = 0.05)
         alpha <- 0.05
         critical_value_z_zad2 <- qnorm(1 - alpha/2)
-        cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad2, "\n")
+        # cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad2, "\n")
         if (abs(z_statistic_zad2) > critical_value_z_zad2) {
           cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
         } else {
@@ -115,7 +115,7 @@ if (!is.null(data_waga1)) {
         cat("Stopnie swobody (df):", df_zad2, "\n")
         # Porównanie z wartościami krytycznymi (alpha = 0.05)
         critical_value_t_zad2 <- qt(1 - alpha/2, df = df_zad2)
-        cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad2, "):", critical_value_t_zad2, "\n")
+        # cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad2, "):", critical_value_t_zad2, "\n")
          if (abs(t_statistic_zad2) > critical_value_t_zad2) {
           cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
         } else {
@@ -162,7 +162,7 @@ if (!is.null(data_waga1)) {
         # Porównanie z wartościami krytycznymi (alpha = 0.05)
         alpha <- 0.05
         critical_value_z_zad3 <- qnorm(1 - alpha/2)
-        cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad3, "\n")
+        # cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad3, "\n")
         if (abs(z_statistic_zad3) > critical_value_z_zad3) {
           cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
         } else {
@@ -186,7 +186,7 @@ if (!is.null(data_waga1)) {
         cat("Stopnie swobody (df):", df_zad3, "\n")
         # Porównanie z wartościami krytycznymi (alpha = 0.05)
         critical_value_t_zad3 <- qt(1 - alpha/2, df = df_zad3)
-        cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad3, "):", critical_value_t_zad3, "\n")
+        # cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad3, "):", critical_value_t_zad3, "\n")
          if (abs(t_statistic_zad3) > critical_value_t_zad3) {
           cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
         } else {
@@ -257,7 +257,7 @@ if (!is.null(data_waga1)) {
         cat("Stopnie swobody (df):", df_zad4, "\n")
         # Porównanie z wartościami krytycznymi (alpha = 0.05)
         critical_value_t_zad4 <- qt(1 - alpha/2, df = df_zad4)
-        cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad4, "):", critical_value_t_zad4, "\n")
+        # cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad4, "):", critical_value_t_zad4, "\n")
          if (abs(t_statistic_zad4) > critical_value_t_zad4) {
           cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
         } else {
@@ -304,7 +304,7 @@ if (!is.null(data_waga1)) {
         # Porównanie z wartościami krytycznymi (alpha = 0.05)
         alpha <- 0.05
         critical_value_z_zad5 <- qnorm(1 - alpha/2)
-        cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad5, "\n")
+        # cat("Wartość krytyczna Z (alpha =", alpha, "):", critical_value_z_zad5, "\n")
         if (abs(z_statistic_zad5) > critical_value_z_zad5) {
           cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
         } else {
@@ -328,7 +328,7 @@ if (!is.null(data_waga1)) {
         cat("Stopnie swobody (df):", df_zad5, "\n")
         # Porównanie z wartościami krytycznymi (alpha = 0.05)
         critical_value_t_zad5 <- qt(1 - alpha/2, df = df_zad5)
-        cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad5, "):", critical_value_t_zad5, "\n")
+        # cat("Wartość krytyczna t (alpha =", alpha, ", df =", df_zad5, "):", critical_value_t_zad5, "\n")
          if (abs(t_statistic_zad5) > critical_value_t_zad5) {
           cat("Wniosek (alpha =", alpha, "): Odrzucamy hipotezę zerową.\n")
         } else {
