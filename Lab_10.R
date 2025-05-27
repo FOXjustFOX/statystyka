@@ -293,5 +293,3 @@ if(nrow(dane_waga_boot_7b_filtered[dane_waga_boot_7b_filtered$plec == 1,]) > 1 &
   cat("   Wyniki bootstrapu:\n")
   print(przedzial_ufnosci_boot_7b)
 } else { cat("   Za mało danych dla bootstrapu w zad 7b po usunięciu NA lub dla jednej z płci.\n") }
-
-cat("\n--- Koniec skryptu ---\n")

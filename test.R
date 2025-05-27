@@ -188,6 +188,7 @@ cat("------------------\n")
     # estymator gęstości (plot)
     plot(density(cena_m2_clean), main = "Estymator gęstości dla ceny za m²", xlab = "Cena za m²", col = "blue")
     abline(v = mean(cena_m2_clean), col = "red", lty = 2)
+    cat("   (Wygenerowano wykres estymatora gęstości dla ceny za m²)\n")
   } else {
     cat("a) Za mało danych do wykonania testu Shapiro-Wilka i rysowania estymatora gęstości dla ceny za m² (wymagane min. 3 obserwacje).\n")
   }
