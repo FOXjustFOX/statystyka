@@ -179,7 +179,7 @@ if (!is.null(data)) {
   cat("------------------\n")
 cat(" zadanie 5 \n")
 cat("------------------\n")
-  
+
 
   # a) Test normalności dla ceny za m²
   if (length(cena_m2_clean) >= 3) {
